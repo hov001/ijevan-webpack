@@ -3,6 +3,7 @@ import { getTable } from "../../services/getDatas.services.js";
 import Club from "../Club/Club.js";
 import TableHeader from "../TableHeader/TableHeader.js";
 import TableLiner from "../TableLiner/TableLiner.js";
+import styles from "../../styles/style.css";
 
 export default function Table() {
   const ClubsNodes = getTable().map((clubData, idx) =>
@@ -11,9 +12,9 @@ export default function Table() {
 
   return createElement(
     "section",
-    { class: "table" },
+    { class: styles.table },
     TableHeader(),
     TableLiner(),
-    createElement("div", { class: "clubs" }, ...ClubsNodes)
+    createElement("div", { class: styles.table }, ...ClubsNodes)
   );
 }

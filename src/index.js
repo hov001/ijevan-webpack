@@ -1,9 +1,5 @@
-const { remove } = require("lodash");
-// import _ from "lodash";
+import Table from "./src/components/Table/Table.js";
 
-const array = [3, false, "", 4, 0, "hello", null, true];
+const root = document.getElementById("root");
 
-const res = remove([...array], (item) => item);
-
-console.log("array:::", array);
-console.log("res:::", res);
+root.append(Table());
